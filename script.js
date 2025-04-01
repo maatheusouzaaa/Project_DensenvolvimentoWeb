@@ -323,6 +323,25 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         document.head.appendChild(style);
     }
+    
+    // Funcionalidade de navbar fixa com scroll
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
+    const headerHeight = header ? header.offsetHeight : 0;
+
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop && scrollTop > headerHeight) {
+            // Scroll para baixo - esconde a navbar
+            header.style.top = `-${headerHeight}px`;
+        } else {
+            // Scroll para cima - mostra a navbar
+            header.style.top = '0';
+        }
+        
+        lastScrollTop = scrollTop;
+    });
 });
 
 // Atualiza o ano no rodapé

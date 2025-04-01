@@ -69,7 +69,7 @@
     text-align: center;
     font-size: 2.2rem;
     margin-bottom: 3rem;
-    color: var(--primary-color);
+    color: var(--teste-color);
 }
 
 .about-features {
@@ -125,6 +125,7 @@
 
 [data-theme="dark"] {
     --primary-color-rgb: 30, 51, 30;
+    --teste-color: white;
     --secondary-color-rgb: 42, 110, 77;
 }
 

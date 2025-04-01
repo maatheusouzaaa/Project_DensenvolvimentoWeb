@@ -104,7 +104,7 @@
 .resource-text h3 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: var(--primary-color);
+    color: var(--teste-color);
 }
 
 .resource-text p {
@@ -155,6 +155,7 @@
 
 [data-theme="dark"] {
     --primary-color-rgb: 30, 51, 30;
+    --teste-color: white;
     --secondary-color-rgb: 42, 110, 77;
 }
 
@@ -162,7 +163,7 @@
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--primary-color);
+    color: var(--teste-color);
 }
 
 .tools-grid {
@@ -272,6 +273,11 @@
     font-size: 0.8rem;
     font-weight: bold;
     border-bottom-left-radius: 10px;
+}
+
+.cta-buttons {
+    padding: auto;
+    margin-bottom: auto;
 }
 
 .plan-header {

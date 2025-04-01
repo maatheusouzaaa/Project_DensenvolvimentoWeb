@@ -37,6 +37,7 @@
 
 [data-theme="dark"] {
     --primary-color: #1e331e;
+    --teste-color: white;
     --secondary-color: #2a6e4d;
     --secondary-hover: #225e41;
     --text-color: #e0e0e0;
@@ -61,6 +62,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
+    padding-top: 70px; /* Adicionado para compensar a altura da navbar fixa */
 }
 
 header {
@@ -68,7 +70,12 @@ header {
     color: var(--header-text);
     padding: 1rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, top 0.3s ease;
+    position: fixed; /* Fixado no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garantir que fique acima de outros elementos */
 }
 
 nav {
@@ -216,7 +223,7 @@ h2 {
 .section-title {
     text-align: center;
     margin-bottom: 3rem;
-    color: var(--primary-color);
+    color: var(--teste-color);
     transition: color 0.3s;
 }
 
