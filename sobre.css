@@ -69,7 +69,7 @@
     text-align: center;
     font-size: 2.2rem;
     margin-bottom: 3rem;
-    color: var(--teste-color);
+    color: var(--primary-color);
 }
 
 .about-features {
@@ -125,7 +125,6 @@
 
 [data-theme="dark"] {
     --primary-color-rgb: 30, 51, 30;
-    --teste-color: white;
     --secondary-color-rgb: 42, 110, 77;
 }
 
@@ -395,4 +394,91 @@
 .nav-links a.active {
     color: var(--secondary-color);
     font-weight: bold;
+}
+
+/* Seção: Histórias de Superação */
+.success-stories {
+    padding: 5rem 2rem;
+    background-color: var(--background-color);
+}
+
+.success-stories .section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.stories-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.story-card {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+}
+
+.story-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.story-content h4 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.story-title {
+    font-weight: bold;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.story-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.story-quote {
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    margin-top: auto;
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: var(--secondary-hover);
+}
+
+@media (max-width: 768px) {
+    .stories-container {
+        grid-template-columns: 1fr;
+    }
 }
