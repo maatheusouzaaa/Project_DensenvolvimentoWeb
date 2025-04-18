@@ -113,6 +113,114 @@
     line-height: 1.6;
 }
 
+/* Nova seção: Histórias de Superação */
+.success-stories {
+    padding: 5rem 2rem;
+    background-color: var(--card-background);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.stories-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.story-card {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+}
+
+.story-image {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.story-card:hover .story-image img {
+    transform: scale(1.05);
+}
+
+.story-content {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.story-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.story-title {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.story-desc {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.story-quote {
+    font-style: italic;
+    color: var(--text-color);
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.read-more {
+    align-self: flex-start;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.read-more:hover {
+    opacity: 0.8;
+}
+
+/* Remover ou comentar o estilo para o ícone emoji, já que não será mais usado */
+/* 
+.story-image-icon {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+}
+*/
+
 .about-differentials {
     padding: 5rem 0;
     background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.05) 0%, rgba(var(--secondary-color-rgb), 0.05) 100%);
@@ -336,41 +444,41 @@
     .about-hero h1 {
         font-size: 2.8rem;
     }
-    
+
     .about-hero h2 {
         font-size: 1.4rem;
     }
-    
+
     .intro-text {
         font-size: 1.1rem;
     }
-    
+
     .differentials-container {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .differential-card {
         width: 100%;
         max-width: none;
     }
-    
+
     .steps-container {
         flex-direction: column;
     }
-    
+
     .step {
         width: 100%;
     }
-    
+
     .cta-content h2 {
         font-size: 2rem;
     }
-    
+
     .cta-content p {
         font-size: 1.1rem;
     }
-    
+
     .cta-buttons {
         flex-direction: column;
         align-items: center;
@@ -394,91 +502,4 @@
 .nav-links a.active {
     color: var(--secondary-color);
     font-weight: bold;
-}
-
-/* Seção: Histórias de Superação */
-.success-stories {
-    padding: 5rem 2rem;
-    background-color: var(--background-color);
-}
-
-.success-stories .section-title {
-    text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 3rem;
-    color: var(--primary-color);
-}
-
-.stories-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.story-card {
-    background-color: var(--card-background);
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: var(--card-shadow);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s;
-}
-
-.story-card:hover {
-    transform: translateY(-5px);
-}
-
-.story-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--secondary-color);
-}
-
-.story-content h4 {
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-    color: var(--primary-color);
-}
-
-.story-title {
-    font-weight: bold;
-    color: var(--text-secondary);
-    margin-bottom: 0.5rem;
-}
-
-.story-desc {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: var(--text-color);
-    margin-bottom: 1rem;
-}
-
-.story-quote {
-    font-style: italic;
-    color: var(--secondary-color);
-    margin-bottom: 1rem;
-}
-
-.read-more {
-    margin-top: auto;
-    color: var(--secondary-color);
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.read-more:hover {
-    color: var(--secondary-hover);
-}
-
-@media (max-width: 768px) {
-    .stories-container {
-        grid-template-columns: 1fr;
-    }
 }
