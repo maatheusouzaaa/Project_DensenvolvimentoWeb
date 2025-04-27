@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Verificando se estamos na página inicial, onde existem estes botões
     const primaryBtn = document.querySelector('.btn-primary');
     const secondaryBtn = document.querySelector('.btn-secondary');
+    const ctaBtn = document.querySelector('.btn-cta');
     
     if (primaryBtn) {
         primaryBtn.addEventListener('click', function() {
@@ -33,6 +34,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     behavior: 'smooth'
                 });
             }
+        });
+    }
+    
+    if (ctaBtn) {
+        ctaBtn.addEventListener('click', function() {
+            // Redirecionando para a página de cadastro
+            window.location.href = 'login.html#cadastro';
         });
     }
     
@@ -169,6 +177,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 targetForm.classList.add('active');
             });
         });
+        
+        // Verificar se há um hash na URL para direcionar para cadastro
+        if (window.location.hash === '#cadastro') {
+            const cadastroBtn = document.querySelector('.tab-btn[data-target="cadastro-form"]');
+            if (cadastroBtn) {
+                cadastroBtn.click();
+            }
+        }
     }
     
     // Gerenciar os botões de mostrar/esconder senha
@@ -342,6 +358,141 @@ document.addEventListener('DOMContentLoaded', function() {
         
         lastScrollTop = scrollTop;
     });
+    
+    // Inicializar AOS (Animate On Scroll)
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    }
+    
+    // Controles do menu hamburguer
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    }
+    
+    // Contador de estatísticas
+    const statCounts = document.querySelectorAll('.stat-count');
+    
+    if (statCounts.length > 0) {
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const targetNumber = parseInt(target.getAttribute('data-count'));
+                    let count = 0;
+                    const duration = 2000; // 2 segundos
+                    const interval = Math.floor(duration / targetNumber);
+                    
+                    const counter = setInterval(() => {
+                        count++;
+                        target.textContent = count;
+                        
+                        if (count >= targetNumber) {
+                            clearInterval(counter);
+                            target.textContent = targetNumber;
+                        }
+                    }, interval);
+                    
+                    observer.unobserve(target);
+                }
+            });
+        }, options);
+        
+        statCounts.forEach(counter => {
+            observer.observe(counter);
+        });
+    }
+    
+    // Controles do slider de depoimentos
+    const testimonialDots = document.querySelectorAll('.testimonial-dots .dot');
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    const prevBtn = document.querySelector('.testimonial-btn.prev');
+    const nextBtn = document.querySelector('.testimonial-btn.next');
+    
+    if (testimonialDots.length > 0 && testimonialCards.length > 0) {
+        let currentIndex = 0;
+        
+        function showTestimonial(index) {
+            // Remover classes active
+            testimonialDots.forEach(dot => dot.classList.remove('active'));
+            testimonialCards.forEach(card => card.classList.remove('active'));
+            
+            // Adicionar classe active ao índice atual
+            testimonialDots[index].classList.add('active');
+            testimonialCards[index].classList.add('active');
+            
+            currentIndex = index;
+        }
+        
+        // Adicionar eventos aos pontos de navegação
+        testimonialDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showTestimonial(index);
+            });
+        });
+        
+        // Adicionar eventos aos botões de navegação
+        if (prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', () => {
+                let newIndex = currentIndex - 1;
+                if (newIndex < 0) {
+                    newIndex = testimonialCards.length - 1;
+                }
+                showTestimonial(newIndex);
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                let newIndex = currentIndex + 1;
+                if (newIndex >= testimonialCards.length) {
+                    newIndex = 0;
+                }
+                showTestimonial(newIndex);
+            });
+        }
+        
+        // Rotação automática
+        setInterval(() => {
+            let newIndex = currentIndex + 1;
+            if (newIndex >= testimonialCards.length) {
+                newIndex = 0;
+            }
+            showTestimonial(newIndex);
+        }, 5000);
+    }
+    
+    // Formulário da newsletter
+    const newsletterForm = document.querySelector('.newsletter-form');
+    
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const emailInput = this.querySelector('input[type="email"]');
+            if (!emailInput || !emailInput.value) {
+                showMessage('Por favor, insira um e-mail válido.', 'error');
+                return;
+            }
+            
+            // Simulação de inscrição bem-sucedida
+            showMessage('Inscrição realizada com sucesso!', 'success');
+            emailInput.value = '';
+        });
+    }
 });
 
 // Atualiza o ano no rodapé
