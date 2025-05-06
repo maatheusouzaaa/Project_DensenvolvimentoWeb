@@ -2,30 +2,53 @@
 
 :root {
     --primary-color: #006699;
+    --primary-dark: #005588;
+    --primary-light: #0077aa;
     --secondary-color: #66cc99;
-    --text-color: #333333;
-    --text-secondary: #666666;
-    --background-color: #ffffff;
-    --card-background: #f8f9fa;
-    --hero-gradient-start: #005b8c;
-    --hero-gradient-end: #00966e;
-    --card-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    --primary-color-rgb: 0, 102, 153;
-    --secondary-color-rgb: 102, 204, 153;
+    --secondary-hover: #55bb88;
+    --accent-color: #ff6b6b;
+    --text-color: #333;
+    --text-secondary: #666;
+    --text-light: #999;
+    --background-color: #f8f9fa;
+    --card-background: white;
+    --card-background-hover: #f5f9ff;
+    --hero-gradient-start: #006699;
+    --hero-gradient-end: #004466;
+    --card-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    --card-shadow-hover: 0 15px 35px rgba(0,0,0,0.12);
+    --header-text: white;
+    --border-color: #e0e0e0;
+    --stats-bg: #f0f4f8;
+    --testimonial-bg: #f9f9f9;
+    --cta-gradient-start: #006699;
+    --cta-gradient-end: #0099cc;
+    --transition-speed: 0.3s;
 }
 
 [data-theme="dark"] {
-    --primary-color: #3396d1;
-    --secondary-color: #4bd99b;
+    --primary-color: #1e331e;
+    --primary-dark: #162616;
+    --primary-light: #2a462a;
+    --secondary-color: #2a6e4d;
+    --secondary-hover: #225e41;
+    --accent-color: #ff6b6b;
     --text-color: #e0e0e0;
     --text-secondary: #b0b0b0;
+    --text-light: #888;
     --background-color: #121212;
     --card-background: #1e1e1e;
+    --card-background-hover: #252525;
     --hero-gradient-start: #1e331e;
-    --hero-gradient-end: #265d49;
-    --card-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    --primary-color-rgb: 30, 51, 30;
-    --secondary-color-rgb: 42, 110, 77;
+    --hero-gradient-end: #152415;
+    --card-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    --card-shadow-hover: 0 15px 35px rgba(0,0,0,0.25);
+    --header-text: #e0e0e0;
+    --border-color: #333;
+    --stats-bg: #1a1a1a;
+    --testimonial-bg: #1e1e1e;
+    --cta-gradient-start: #1e331e;
+    --cta-gradient-end: #2a462a;
 }
 
 .container {
@@ -134,15 +157,15 @@
 /* Section Headings */
 .section-title {
     text-align: center;
+    margin-bottom: 4rem;
     font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: var(--primary-color);
+    color: var(--text-color);
     position: relative;
     padding-bottom: 1rem;
 }
 
 .section-title::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -477,5 +500,14 @@
 
 .cta-content {
     position: relative;
-    z-index: 0;
-    }
+    z-index: 1;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 2;
+}

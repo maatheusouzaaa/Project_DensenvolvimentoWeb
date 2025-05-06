@@ -6,290 +6,198 @@
     <title>Recursos | FinWise - Educação Financeira Inteligente</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="recurso.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Fin<span>Wise</span></div>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="recurso.html" class="active">Recursos</a>
-                <a href="sobre.html">Sobre</a>
-                <a href="contato.html">Contato</a>
-                <button id="darkModeToggle" class="dark-mode-toggle">
-                    <span class="dark-mode-icon">🌙</span>
-                    <span class="light-mode-icon">☀️</span>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo animate__animated animate__fadeIn">
+                Fin<span>Wise</span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="animate__animated animate__fadeIn">Home</a>
+                <a href="recurso.html" class="animate__animated animate__fadeIn active">Recursos</a>
+                <a href="sobre.html" class="animate__animated animate__fadeIn">Sobre</a>
+                <a href="contato.html" class="animate__animated animate__fadeIn">Contato</a>
+                <button id="darkModeToggle" class="dark-mode-toggle animate__animated animate__fadeIn">
+                    <i class="fas fa-moon dark-mode-icon"></i>
+                    <i class="fas fa-sun light-mode-icon"></i>
                 </button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
         </nav>
     </header>
     
     <section class="resource-hero">
-        <div class="resource-hero-content">
-            <h1>Ferramentas <span class="highlight">Poderosas</span> para suas Finanças</h1>
-            <div class="typing-container">
+        <div class="hero-content animate__animated animate__fadeIn">
+            <h1 class="animate__animated animate__fadeInUp">Ferramentas <span class="highlight">Poderosas</span></h1>
+            <div class="typing-container animate__animated animate__fadeIn">
                 <h2 class="typing-subtitle"></h2>
+            </div>
+            <p class="hero-description animate__animated animate__fadeIn">
+                Descubra todas as funcionalidades que vão transformar sua relação com o dinheiro
+            </p>
         </div>
     </section>
     
-    
-<section class="features">
-    <h3 class="section-title">Recursos Principais</h3>
-    <div class="feature-grid">
-        <div class="feature-card">
-            <div class="feature-icon">📊</div>
-            <h4 class="feature-title">Dashboard Financeiro</h4>
-            <p class="feature-desc">Visualize receitas, despesas e metas em um painel personalizável e intuitivo.</p>
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Nossos Recursos</h2>
+            <div class="feature-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h4 class="feature-title">Dashboard Financeiro</h4>
+                    <p class="feature-desc">Visualize todas suas finanças em um único lugar com gráficos interativos.</p>
+                    <a href="#" class="feature-link">Saiba mais <i class="fas fa-chevron-right"></i></a>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h4 class="feature-title">Controle de Gastos</h4>
+                    <p class="feature-desc">Categorize e acompanhe todos seus gastos com alertas personalizados.</p>
+                    <a href="#" class="feature-link">Saiba mais <i class="fas fa-chevron-right"></i></a>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h4 class="feature-title">Metas Financeiras</h4>
+                    <p class="feature-desc">Defina e acompanhe suas metas com planos de ação personalizados.</p>
+                    <a href="#" class="feature-link">Saiba mais <i class="fas fa-chevron-right"></i></a>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4 class="feature-title">Relatórios Detalhados</h4>
+                    <p class="feature-desc">Relatórios mensais e anuais para análise completa das suas finanças.</p>
+                    <a href="#" class="feature-link">Saiba mais <i class="fas fa-chevron-right"></i></a>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <h4 class="feature-title">Economia Inteligente</h4>
+                    <p class="feature-desc">Descubra oportunidades para economizar baseado em seus padrões.</p>
+                    <a href="#" class="feature-link">Saiba mais <i class="fas fa-chevron-right"></i></a>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h4 class="feature-title">Segurança Total</h4>
+                    <p class="feature-desc">Seus dados protegidos com criptografia de última geração.</p>
+                    <a href="#" class="feature-link">Saiba mais <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
         </div>
-        <div class="feature-card">
-            <div class="feature-icon">💸</div>
-            <h4 class="feature-title">Orçamento Inteligente</h4>
-            <p class="feature-desc">Organize seus gastos, defina limites por categoria e acompanhe sua evolução mensal.</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">🎯</div>
-            <h4 class="feature-title">Metas Financeiras</h4>
-            <p class="feature-desc">Crie metas de curto e longo prazo com acompanhamento e notificações automáticas.</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">📈</div>
-            <h4 class="feature-title">Relatórios Analíticos</h4>
-            <p class="feature-desc">Obtenha insights e comparações por período para melhorar suas decisões financeiras.</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">🔥</div>
-            <h4 class="feature-title">Desafios Gamificados</h4>
-            <p class="feature-desc">Participe de desafios como o das 52 semanas e engaje-se com sua saúde financeira.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-    
     <section class="resource-tools">
         <div class="container">
-            <h2 class="section-heading">Ferramentas Especiais</h2>
-            
+            <h2 class="section-title">Ferramentas Especiais</h2>
             <div class="tools-grid">
-                <div class="tool-card">
-                    <div class="tool-icon">💰</div>
-                    <h3>Calculadora de Juros Compostos</h3>
-                    <p>Simule o crescimento dos seus investimentos ao longo do tempo e descubra o poder dos juros compostos.</p>
-                    <a href="#" class="tool-preview">Ver exemplo</a>
+                <div class="tool-card" data-aos="fade-up">
+                    <div class="tool-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Calculadora Financeira</h3>
+                    <p>Simule investimentos, financiamentos e muito mais com nossas calculadoras especializadas.</p>
+                    <a href="#" class="btn btn-outline">Experimentar</a>
                 </div>
                 
-                <div class="tool-card">
-                    <div class="tool-icon">🏠</div>
-                    <h3>Simulador de Financiamento</h3>
-                    <p>Calcule prestações, juros e tempo para quitar financiamentos imobiliários ou de veículos.</p>
-                    <a href="#" class="tool-preview">Ver exemplo</a>
+                <div class="tool-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tool-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Simulador Imobiliário</h3>
+                    <p>Calcule prestações, valor de entrada e tempo para quitar seu imóvel.</p>
+                    <a href="#" class="btn btn-outline">Experimentar</a>
                 </div>
                 
-                <div class="tool-card">
-                    <div class="tool-icon">👵</div>
+                <div class="tool-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tool-icon">
+                        <i class="fas fa-retirement"></i>
+                    </div>
                     <h3>Planejador de Aposentadoria</h3>
-                    <p>Descubra quanto você precisa economizar mensalmente para atingir a aposentadoria dos seus sonhos.</p>
-                    <a href="#" class="tool-preview">Ver exemplo</a>
-                </div>
-                
-                <div class="tool-card">
-                    <div class="tool-icon">💸</div>
-                    <h3>Analisador de Dívidas</h3>
-                    <p>Identifique a melhor estratégia para quitar suas dívidas mais rapidamente e com menos juros.</p>
-                    <a href="#" class="tool-preview">Ver exemplo</a>
+                    <p>Descubra quanto precisa guardar mensalmente para se aposentar com tranquilidade.</p>
+                    <a href="#" class="btn btn-outline">Experimentar</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!--
-    <section class="resource-plans">
-        <div class="container">
-            <h2 class="section-heading">Planos Disponíveis</h2>
-            <p class="plans-intro">Escolha o plano ideal para suas necessidades financeiras</p>
-            
-            <div class="plans-container">
-                <div class="plan-card">
-                    <div class="plan-header">
-                        <h3 class="plan-name">Básico</h3>
-                        <div class="plan-price">Grátis</div>
-                        <p class="plan-billing">para sempre</p>
-                    </div>
-                    <div class="plan-features">
-                        <ul>
-                            <li>Dashboard financeiro básico</li>
-                            <li>Controle de receitas e despesas</li>
-                            <li>Criação de até 3 metas</li>
-                            <li>Calculadoras financeiras simples</li>
-                            <li>Acesso à comunidade FinWise</li>
-                        </ul>
-                    </div>
-                    <div class="plan-cta">
-                        <a href="#" class="btn btn-secondary">Criar Conta Grátis</a>
-                    </div>
-                </div>
-                
-                <div class="plan-card featured">
-                    <div class="plan-badge">Mais Popular</div>
-                    <div class="plan-header">
-                        <h3 class="plan-name">Premium</h3>
-                        <div class="plan-price">R$ 29,90</div>
-                        <p class="plan-billing">por mês</p>
-                    </div>
-                    <div class="plan-features">
-                        <ul>
-                            <li>Todas as funções do plano Básico</li>
-                            <li>Dashboard avançado personalizado</li>
-                            <li>Relatórios analíticos detalhados</li>
-                            <li>Metas ilimitadas com acompanhamento</li>
-                            <li>Sincronização com bancos</li>
-                            <li>Ferramentas avançadas de planejamento</li>
-                            <li>Alertas personalizados</li>
-                        </ul>
-                    </div>
-                    <div class="plan-cta">
-                        <a href="#" class="btn btn-primary">Experimente 7 dias grátis</a>
-                    </div>
-                </div>
-                
-                <div class="plan-card">
-                    <div class="plan-header">
-                        <h3 class="plan-name">Familiar</h3>
-                        <div class="plan-price">R$ 49,90</div>
-                        <p class="plan-billing">por mês</p>
-                    </div>
-                    <div class="plan-features">
-                        <ul>
-                            <li>Todas as funções do plano Premium</li>
-                            <li>Até 5 usuários na mesma conta</li>
-                            <li>Controle de mesada para crianças</li>
-                            <li>Planejamento financeiro familiar</li>
-                            <li>Metas compartilhadas</li>
-                            <li>Orientação financeira personalizada</li>
-                            <li>Consultas trimestrais com especialista</li>
-                        </ul>
-                    </div>
-                    <div class="plan-cta">
-                        <a href="#" class="btn btn-secondary">Experimente 7 dias grátis</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
-
-    <section class="resource-testimonials">
-        <div class="container">
-            <h2 class="section-heading">O que nossos usuários dizem</h2>
-            
-            <div class="testimonials-container">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"O FinWise transformou completamente minha relação com o dinheiro. Em apenas 6 meses, consegui quitar todas as minhas dívidas e comecei a investir!"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="/api/placeholder/60/60" alt="Foto de perfil" />
-                        </div>
-                        <div class="author-info">
-                            <h4>Ana Paula</h4>
-                            <p>Usuária há 1 ano</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"As ferramentas de planejamento são incríveis! Finalmente consegui visualizar minha aposentadoria de forma clara e estou no caminho certo para realizá-la."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="/api/placeholder/60/60" alt="Foto de perfil" />
-                        </div>
-                        <div class="author-info">
-                            <h4>Carlos Eduardo</h4>
-                            <p>Usuário há 8 meses</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"A funcionalidade de desafios financeiros mudou a forma como nossa família lida com dinheiro. Meus filhos agora participam ativamente do orçamento familiar!"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="/api/placeholder/60/60" alt="Foto de perfil" />
-                        </div>
-                        <div class="author-info">
-                            <h4>Família Oliveira</h4>
-                            <p>Usuários há 2 anos</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="resource-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Comece sua jornada financeira hoje mesmo!</h2>
-                <p>Transforme sua relação com o dinheiro e dê o primeiro passo para a liberdade financeira.</p>
-                <div class="cta-buttons">
-                    <a href="#" class="btn btn-primary">Cadastre-se Gratuitamente</a>
-                    <a href="#" class="btn btn-outline">Agendar Demonstração</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
     <footer class="footer">
-        <div class="container">
-            <div class="footer-slogan">
-                <h3>Fin<span>Wise</span></h3>
-                <p>Controle sua vida financeira de forma simples e eficiente!</p>
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-logo">
+                    Fin<span>Wise</span>
+                    <p>Transformando sua relação com o dinheiro</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="recurso.html">Recursos</a></li>
+                            <li><a href="sobre.html">Sobre</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Recursos</h4>
+                        <ul>
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Metas</a></li>
+                            <li><a href="#">Relatórios</a></li>
+                            <li><a href="#">Calculadoras</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Termos de Uso</a></li>
+                            <li><a href="#">Política de Privacidade</a></li>
+                            <li><a href="#">Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Receba dicas financeiras exclusivas</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu e-mail" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="footer-links">
-                <div class="footer-col">
-                    <h4>Navegação</h4>
-                    <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="recurso.html">Recursos</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="#">Contato</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Recursos</h4>
-                    <ul>
-                        <li><a href="#dashboard">Dashboard</a></li>
-                        <li><a href="#goals">Metas</a></li>
-                        <li><a href="#reports">Relatórios</a></li>
-                        <li><a href="#challenges">Desafios</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contato</h4>
-                    <ul>
-                        <li><a href="#">Suporte</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Política de Privacidade</a></li>
-                        <li><a href="#">Termos de Uso</a></li>
-                    </ul>
-                </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> FinWise. Todos os direitos reservados.</p>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; <span id="current-year">2025</span> FinWise. Todos os direitos reservados.</p>
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="script.js"></script>
-    <script src="recurso.js"></script>
-    
-    <script>
-        // Script para atualizar automaticamente o ano no copyright
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
